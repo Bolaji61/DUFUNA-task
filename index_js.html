@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dufuna JS</title>
+    <script type="text/javascript">
+        function addItem(){
+            var li = document.createElement("LI");  
+            var input = document.getElementById("textfield");
+            li.innerHTML = input.value;
+            input.value = "";
+
+            document.getElementById("list").appendChild(li);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="textfield"/>
+    <button id="add" onclick="addItem()">Add to Wishlist</button>
+    <div class="wishlist">
+        <h1>Wishlist</h1>
+        <ul id="list"></ul>
+    </div>
+    
+</body>
+
+</html>
